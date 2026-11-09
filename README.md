@@ -20,16 +20,16 @@ MVP for WBL II.
 4. Agent: log in as a developer, pick a project and role, click **Generate agent command**, then run it:
    `cd agent && node index.js <AGENT_TOKEN>`
 
-The backend uses Node's built-in `node:sqlite` module, so it needs Node 22.5+. The agent uses the built-in `fetch`.
+The backend uses Node's built-in `node:sqlite` module. The agent uses the built-in `fetch`.
 
 ## Accounts and roles
 
 There are two kinds of account, and separately, each project has its own roles.
 
-| | Can do |
-|---|---|
+|                      | Can do                                                                                                                                              |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Maintainer** | Create projects, define project roles, add/delete requirements (optionally per role), promote or demote users, see every developer's latest results |
-| **Developer** | Log in, choose a project and role, generate an agent command, see their own results |
+| **Developer**  | Log in, choose a project and role, generate an agent command, see their own results                                                                 |
 
 - Accounts use a username (anything up to 64 characters, matched case-insensitively) and a password of at least 8 characters.
 - Anyone can self-register, but only as a developer. A maintainer can promote them from the Users panel; `npm run create-maintainer` creates or promotes an account from the command line.
